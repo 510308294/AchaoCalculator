@@ -1,0 +1,38 @@
+int num = int.Parse(Console.ReadLine());
+            Random ra = new Random();
+            for (int i = 1;i< num; i++)
+            {
+                double a = ra.Next(0, 100);
+                double b = ra.Next(0, 100);
+                double c = ra.Next(0, 100);                                      
+                double result = 0;
+                int d = ra.Next(1, 4);
+                switch (d)
+                {
+                    case 1:
+                        result = a + b-c;
+                        if(result <100&&result>0)
+                            Console.WriteLine(a + "+" + b + "-"+c+"=");
+                        break;
+                    case 2:
+                        result = a - b - c;
+                        if (result < 100 && result > 0)
+                            Console.WriteLine(a + "-" + b + "-"+c+"=");
+                        break;
+                    case 3:
+                        result = a * b-c;
+                        if (result < 100 && result > 0)
+                            Console.WriteLine(a + "*" + b +"-" +c+"=");
+                        break;
+                    case 4:
+                        if (a % b == 0 && b != 0)
+                        {                          
+                         result = a / b-c;
+                            if (result < 100 && result > 0)
+                                Console.WriteLine(a + "/" + b + "-"+c+"=");
+                        }
+                        break;
+                }
+            }
+            Console.ReadLine();
+        }
